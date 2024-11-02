@@ -1,0 +1,116 @@
+/* google font link */
+
+@import url('https://fonts.googleapis.com/css2?family=Girassol&family=Jolly+Lodger&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+body {
+    min-height: 100vh;
+    /* background: linear-gradient( #f1faff, #cbe4ff); */
+}
+
+.sidebar {
+    background: #151a2d;
+    width: 270px;
+    position: fixed;
+    margin: 16px;
+    border-radius: 16px;
+    height: calc(100vh - 32px);
+    transition: 0.3s;
+}
+
+.sidebar.hide {
+    width: 83px;
+}
+
+.sidebar-header {
+    display: flex;
+    padding: 25px 20px;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.sidebar-header .header-logo img {
+    width: 55px;
+    height: 55px;
+    display: block;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 2px solid #202f6b;
+    transition: .3s;
+}
+
+.sidebar.hide .sidebar-header .header-logo img {
+    opacity: 0;
+    z-index: 1111;
+}
+
+.sidebar.hide .sidebar-header .toggler {
+    margin-left: -5rem;
+    z-index: 5555;
+    transform: rotate(180deg);
+}
+
+.sidebar-header .toggler {
+    color: #151a2d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+.sidebar-header .toggler:hover {
+    background: #c2cef6;
+}
+
+.sidebar-header .toggler span {
+    font-size: 1.75rem;
+}
+
+.sidebar-nav .nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0 15px;
+    transform: translateY(15px);
+}
+
+.sidebar-nav .nav-link {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+
+}
+
+.sidebar-nav.move .nav-link {
+    gap: 50px;
+}
+
+.sidebar-nav .nav-link:hover {
+    background: #293256;
+    color: #fff;
+}
+
+.sidebar-nav .secondary-nav {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+}
