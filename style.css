@@ -22,7 +22,7 @@ body {
     border-radius: 16px;
     height: calc(100vh - 32px);
     transition: 0.3s;
-    overflow:hidde;
+     overflow: hidden;
 }
 
 .sidebar.hide {
